@@ -1,0 +1,25 @@
+﻿@model List<Dominio.Persona>
+@*mando tipo de dato con el cual alimento al model*@
+<h2>Listado de Operadores</h2>
+
+<table class="table">
+    <tr>
+        <th>CI</th>
+        <th>Nombre</th>
+        <th>Mail</th>
+
+    </tr>
+
+    @foreach (var p in Model)
+    {
+        <tr>
+            <td>@p.Ci</td>
+            <td>@p.Nombre</td>
+            <td>@p.Mail</td>
+            <td>@Html.ActionLink("Crear Cuenta", "CrearCuenta", new { id = p.Ci })</td>
+            <td>@Html.ActionLink("Ver Cuentas", "VerCuentas", new { id = p.Ci })</td>
+        </tr>
+    }
+</table>
+
+<p>@ViewBag.Mensaje</p>

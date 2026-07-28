@@ -1,0 +1,41 @@
+﻿<h2>Registro</h2>
+<br />
+
+@*Form se usa cuando queiro enviarle datos al controlador*@
+<form method="post">
+    <table>
+        <tr>
+            <td><label for="txtCi">CI:</label></td>
+            <td><input id="txtCi" type="text" name="ci" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="txtNombre">Nombre:</label></td>
+            <td><input id="txtNombre" type="text" name="nombre" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="txtMail">Email:</label></td>
+            <td><input id="txtMail" type="text" name="mail" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="txtPass">Contraseña:</label></td>
+            <td><input id="txtPass" type="password" name="pass" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="txtTelefono">Telefono:</label></td>
+            <td><input id="txtTelefono" type="text" name="telefono" /></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Registrarse como Operador" />
+            </td>
+        </tr>
+    </table>
+</form>
+
+<p>@ViewBag.Mensaje</p>

@@ -1,0 +1,26 @@
+﻿@model List<Dominio.Incidente>
+@*mando tipo de dato con el cual alimento*@
+<h2>Listado de Incidentes</h2>
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Fecha</th>
+        <th>Estado</th>
+        <th>Codigo de Activo</th>
+        <th>Severidad</th>
+    </tr>
+
+    @foreach (var i in Model)
+    {
+        <tr>
+            <td>@i.Id</td>
+            <td>@i.FechaRep</td>
+            <td>@i.Estado</td>
+            <td>@i.ActivoAfectado.CodA</td>
+            <td>@i.CalculoSeveridad()</td>
+        </tr>
+    }
+</table>
+
+<p>@ViewBag.Mensaje</p>

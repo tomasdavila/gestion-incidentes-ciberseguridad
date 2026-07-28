@@ -1,0 +1,25 @@
+﻿@model List<Dominio.Cuenta>
+@*mando tipo de dato con el cual alimento*@
+<h2>Listado de Cuentas</h2>
+
+<table class="table">
+    <tr>
+        <th>Titular</th>
+        <th>MFA</th>
+        <th>Ultimo cambio de Password</th>
+
+    </tr>
+
+    @foreach (var c in Model)
+    {
+        <tr>
+            <td>@c.Titular.Nombre</td>
+            <td>@c.Mfa</td>
+            <td>@c.FechaPass</td>
+            <td>@Html.ActionLink("Ver Activos", "VerActivos", "Activo", new { id = c.CodU })</td>
+            <td>@Html.ActionLink("Crear Activo", "CrearActivo", "Activo", new { id = c.CodU })</td>
+        </tr>
+    }
+</table>
+
+<p>@ViewBag.Mensaje</p>

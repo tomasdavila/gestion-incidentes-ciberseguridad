@@ -1,0 +1,45 @@
+﻿<h2>Login</h2>
+<br />
+
+<form method="post">
+
+    <label for="txtMail">Email:</label>
+    <input id="txtMail" type="text" name="mail" />
+
+    <br />
+    <br />
+
+    <label for="txtPass">Contraseña:</label>
+    <input id="txtPass" type="password" name="pass" />
+
+    <br />
+    <br />
+
+    <input type="submit" value="Login" />
+
+    <br />
+    <br />
+
+</form>
+
+<a asp-controller="Persona" asp-action="Registro">
+    ¿No tienes una cuenta? Regístrate
+</a>
+
+<div class="usuarios-prueba">
+    <h4>Usuarios de prueba</h4>
+
+    <p>
+        <strong>Administrador</strong><br />
+        Correo: martin.silva@empresa.com.uy<br />
+        Contraseña: Martin123
+    </p>
+
+    <p>
+        <strong>Operador</strong><br />
+        Correo: lucia.martinez@gmail.com<br />
+        Contraseña: Lucia123
+    </p>
+</div>
+
+<p>@ViewBag.Mensaje</p>

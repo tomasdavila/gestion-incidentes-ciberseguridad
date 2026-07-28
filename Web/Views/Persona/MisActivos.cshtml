@@ -1,0 +1,26 @@
+﻿@model List<Dominio.Activo>
+
+<h2>Mis activos</h2>
+
+<table class="table">
+    <tr>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Tipo</th>
+        <th>Criticidad</th>
+        <th>Backup</th>
+    </tr>
+
+    @foreach (Dominio.Activo a in Model)
+    {
+        <tr>
+            <td>@a.CodA</td>
+            <td>@a.Nombre</td>
+            <td>@a.TipoActivo</td>
+            <td>@a.Criticidad</td>
+            <td>@a.TieneBackUp</td>
+        </tr>
+    }
+</table>
+
+<p>@ViewBag.Mensaje</p>

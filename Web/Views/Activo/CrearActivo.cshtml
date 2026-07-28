@@ -1,0 +1,48 @@
+﻿@model Dominio.Cuenta
+
+<h2> Crear Activo </h2>
+
+<form method="post">
+    <input type="hidden" name="idC" value="@Model.CodU" />
+
+    <label for="txtNombre">Nombre:</label>
+    <input id="txtNombre" type="text" name="nombre" />
+
+    <br />
+    <br />
+
+    <label for="slcTipoActivo">Tipo de Activo:</label>
+    <select id="slcTipoActivo" name="tipoActivo">
+        <option value="PC">PC</option>
+        <option value="SERVER">SERVER</option>
+        <option value="MOVIL">MOVIL</option>
+    </select>
+
+    <br />
+    <br />
+
+    <label for="slcCriticidad">Criticidad:</label>
+    <select id="slcCriticidad" name="criticidad">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+
+    <br />
+    <br />
+
+    <label for="slcBackup">Tiene BackUp:</label>
+    <select id="slcBackup" name="tieneBackUp">
+        <option value="true">Sí</option>
+        <option value="false">No</option>
+    </select>
+
+    <br />
+    <br />
+
+    <input type="submit" value="Crear Activo" />
+</form>
+
+<p>@ViewBag.Mensaje</p>

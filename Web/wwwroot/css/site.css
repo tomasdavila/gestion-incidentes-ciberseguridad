@@ -1,0 +1,114 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #f5f7fa;
+}
+
+.form-floating > .form-control-plaintext::placeholder,
+.form-floating > .form-control::placeholder {
+    color: var(--bs-secondary-color);
+    text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder,
+.form-floating > .form-control:focus::placeholder {
+    text-align: start;
+}
+
+/* Espacio superior del contenido principal */
+main {
+    padding-top: 20px;
+}
+
+h1,
+h2 {
+    color: #1f3b5c;
+    margin-bottom: 20px;
+}
+
+/* Tablas */
+.table {
+    background-color: white;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px 12px;
+}
+
+th {
+    background-color: #1f3b5c;
+    color: white;
+}
+
+/* Formularios */
+form {
+    padding: 10px;
+    width: fit-content;
+}
+
+input[type=text],
+input[type=password],
+input[type=date],
+select {
+    padding: 5px;
+    margin-left: 5px;
+}
+
+input[type=submit] {
+    background-color: #1f3b5c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+    input[type=submit]:hover {
+        background-color: #2f5a88;
+    }
+
+/* Enlaces */
+a {
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+/* Usuarios de prueba */
+.usuarios-prueba {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+    width: fit-content;
+}
+
+    .usuarios-prueba h4 {
+        color: #1f3b5c;
+    }

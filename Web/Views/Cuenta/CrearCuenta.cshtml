@@ -1,0 +1,27 @@
+﻿@model Dominio.Persona
+
+<h2> Crear Cuenta </h2>
+
+<form method="post">
+    @* toma la ci de la persona(Model.Ci) y la llamna idUsu mediante el metodo post*@
+    <input type="hidden" name="idUsu" value="@Model.Ci" />
+
+    <label for="slcMfa">MFA:</label>
+    <select id="slcMfa" name="mfa">
+        <option value="true">Sí</option>
+        <option value="false">No</option>
+    </select>
+
+    <br />
+    <br />
+
+    <label for="dateFecha">Fecha:</label>
+    <input id="dateFecha" type="date" name="fecha" />
+
+    <br />
+    <br />
+
+    <input type="submit" value="Crear Cuenta" />
+</form>
+
+<p>@ViewBag.Mensaje</p>

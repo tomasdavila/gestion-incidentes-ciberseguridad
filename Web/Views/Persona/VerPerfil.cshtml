@@ -1,0 +1,33 @@
+﻿@using Dominio
+@model Persona
+@*trabajamos el model como si fuese un atributo de la vista al cual accedemos atraves de su propiedad get*@
+
+@if (Model != null)
+{
+    <p>Nombre: @Model.Nombre</p>
+    <p>Email: @Model.Mail</p>
+    <p>Teléfono: @Model.Telefono</p>
+    <p>Rol: @Model.Rol.ToString()</p>
+    @if (ViewBag.cuentas.Count > 0){
+    <table class="table">
+    <tr>
+        <th>Codigo de Cuenta</th>
+        <th>MFA</th>
+        <th>Ultimo cambio de Password</th>
+        
+    </tr>
+
+    @foreach (Cuenta c in ViewBag.cuentas)
+    {
+        <tr>
+            <td>@c.CodU</td>
+            <td>@c.Mfa</td>
+            <td>@c.FechaPass</td>
+        </tr>
+    }
+    </table>
+}
+else {<p>El usuario no tiene cuentas.</p>}
+}
+
+<p>@ViewBag.Mensaje</p>

@@ -1,0 +1,31 @@
+﻿@model List<Dominio.Activo>
+@*mando tipo de dato con el cual alimento*@
+<h2>Listado de Activos</h2>
+
+<table class="table">
+    <tr>
+        <th>Tipo Activo</th>
+        <th>Nombre</th>
+        <th>Criticidad</th>
+        <th>BackUp</th>
+        <th>Acciones</th>
+    </tr>
+
+    @foreach (var a in Model)
+    {
+        <tr>
+            <td>@a.TipoActivo</td>
+            <td>@a.Nombre</td>
+            <td>@a.Criticidad</td>
+            <td>@a.TieneBackUp</td>
+            <td>
+                @Html.ActionLink(
+        "Desvincular",
+        "DesvincularActivo",
+        "Activo",
+        new { idActivo = a.CodA, idCuenta = a.Cuenta.CodU }
+    )
+            </td>
+        </tr>
+    }
+</table>
