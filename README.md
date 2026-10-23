@@ -1,5 +1,7 @@
 # Sistema de Gestión de Incidentes de Ciberseguridad
 
+Proyecto académico desarrollado para la asignatura Programación 2, de la carrera de Analista en Tecnologías de la Información de la Universidad ORT Uruguay.
+
 Aplicación web desarrollada en **ASP.NET Core MVC** como proyecto académico, orientada a la gestión de incidentes de ciberseguridad mediante una arquitectura basada en el patrón Modelo-Vista-Controlador (MVC).
 
 ## Tecnologías utilizadas
